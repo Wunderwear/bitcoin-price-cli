@@ -7,7 +7,7 @@ $api = "https://api.kurs.web.id/api/v1/?token=$token&bank=$bank&matauang=$mataua
 $kurs = file_get_contents("$api");
 $data = json_decode($kurs);
 
-$content = json_decode(file_get_contents('https://api.coindesk.com/v1/bpi/currentprice.json'), true);
+$content = json_decode(file_get_contents('https://api.coindesk.com/v1/bpi/currentprice.json'), true); 
 
 echo "1 BTC = " . $content['bpi']['USD']['rate'] . " USD\n";
 echo "1 BTC = " . $content['bpi']['GBP']['rate'] . " GBP\n";
